@@ -49,12 +49,11 @@ const int Tree::getCount()
 
 string Tree::serialize()
 {
-	string out;
 	stringstream sstr;
-	sstr << *this;
-	sstr >> out;
+	sstr << *(this->root); //grab root directly skip debug fluff
+	
 
-	return string();
+	return sstr.str();
 }
 
 void Tree::deserialize(string string)

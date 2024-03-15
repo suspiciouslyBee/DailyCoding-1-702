@@ -20,10 +20,11 @@ int main(void) {
 
 	cout << " Reading into tree\n";
 	cout << "Input list: " << input << endl;
-	tree.deserialize(input);
-	cout << "Serializeing...\n";
-	output = tree.serialize();
-	cout << (output == input) << endl;
+	tree.deserialize(input); //this works
+	cout << "Serializing...\n";
+	output = tree.serialize(); // this doesnt
+	cout << output << endl;
+	cout << tree << endl;
 
 
 	return 0;
