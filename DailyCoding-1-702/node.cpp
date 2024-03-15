@@ -24,11 +24,16 @@ void Node::print(ostream& ostr) const
 {
 	//running in an assumption that it will be sorted correctly
 	//print smallest to largest recursively
+	//if someone wanted the single node, 
+	// they will grab the data directly with getData
+
 	if (hasLeft) { //check here first
 		left->print(ostr);
 	}
+
 	//we are now at the 'middle of the chain, the node cant continue to wait
 	ostr << data << " ";
+
 	if (hasRight) {
 		right->print(ostr);
 	}
@@ -91,12 +96,33 @@ Node* Node::insertWhere(int num)
 
 void Node::renumerate()
 {
-	hasRight = (this->right != nullptr);
-	hasLeft = (this->left != nullptr);
+
+	this->hasRight = (this->right != nullptr);
+	this->hasLeft = (this->left != nullptr);
 }
 
 ostream& operator<<(ostream& ostr, const Node& source)
-{
+{	
 	source.print(ostr);
 	return ostr;
 }
+
+Node* Node::getRight() const{
+	return this->right;
+}
+
+Node* Node::getLeft() const{
+	return this->left;
+}
+
+Node* Node::setRight(Node* node) {
+	this->right = node;
+	this->hasRight = (this->right != nullptr);
+	return this->right;
+}
+Node* Node::setLeft(Node* node){
+	this->left = node;
+	this->hasLeft = (this->left != nullptr);
+	return this->left;
+}
+

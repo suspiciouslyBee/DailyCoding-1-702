@@ -44,7 +44,7 @@ public:
 
 
 	int getOccurance() const; //how many instances of this element?
-	void print(ostream& ostr) const; //prints to an oustream
+	void print(ostream& ostr) const; //prints root and all children to ostr
 
 	// recursively searches the proper place (smallest to greatest) to put new
 	// int (left or right node? or children of node?), returns address of the
