@@ -14,6 +14,11 @@ def __init__(self, val, left = None, right = None) :
 */
 // 
 ////
+#ifndef NODE_H
+#define NODE_H
+#include <iostream>
+#include <ostream>
+using namespace std;
 
 class Node {
 public:
@@ -25,13 +30,15 @@ public:
 	Node(int val) : left(nullptr), right(nullptr), data(val), occurance(1),
 		hasRight(false), hasLeft(false) {}
 
+	//Destructor not necciary -> no dyn mem
 
 
 	//Data manipulation
-	Node* setLeft();
-	Node* getLeft();
-	Node* setRight();
-	Node
+	Node* setLeft(Node* node);
+	Node* getLeft() const;
+	Node* setRight(Node* node);
+	Node* getRight() const;
+
 	void setData(int in);
 	int getData() const; //return the data
 
@@ -58,3 +65,5 @@ private:
 	bool hasRight,
 		hasLeft;
 };
+
+#endif
