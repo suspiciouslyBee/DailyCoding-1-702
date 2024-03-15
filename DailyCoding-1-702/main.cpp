@@ -7,8 +7,9 @@
 
 #include <istream>
 #include <iostream>
-#include <vector>
 #include <iomanip>
+#include <string>
+#include <sstream>
 #include "tree.h"
 using namespace std;
 

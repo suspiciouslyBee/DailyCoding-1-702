@@ -65,4 +65,6 @@ private:
 		hasLeft;
 };
 
+ostream& operator<<(ostream& ostr, const Node& source);
+
 #endif
