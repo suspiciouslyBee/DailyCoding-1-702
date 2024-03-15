@@ -39,7 +39,6 @@ public:
 	Node* setRight(Node* node);
 	Node* getRight() const;
 
-	void setData(int in);
 	int getData() const; //return the data
 
 

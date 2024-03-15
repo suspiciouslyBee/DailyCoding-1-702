@@ -10,6 +10,7 @@
 
 #include "Node.h"
 
+
 int Node::getData() const
 {
 	return this->data;
