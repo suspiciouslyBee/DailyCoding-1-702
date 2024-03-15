@@ -47,6 +47,27 @@ const int Tree::getCount()
 	return this->count;
 }
 
+string Tree::serialize()
+{
+	string out;
+	stringstream sstr;
+	sstr << *this;
+	sstr >> out;
+
+	return string();
+}
+
+void Tree::deserialize(string string)
+{
+	stringstream inputStr;
+	int data = 0;
+	inputStr << string; //feed in the argstr
+	while (inputStr.eof() == false) {
+		inputStr >> data;
+		this->insert(data);
+	}
+}
+
 
 
 

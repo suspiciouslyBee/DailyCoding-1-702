@@ -13,6 +13,8 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
+#include <string>
+#include <sstream>
 #include "Node.h"
 using namespace std;
 
@@ -26,6 +28,11 @@ public:
     bool insert(int newVal);//inserts a new value into the tree
 
     const int getCount();
+
+
+    string serialize();
+    void deserialize(string string);
+
 
 private:
     void print(ostream& ostr) const;  // recursive function
