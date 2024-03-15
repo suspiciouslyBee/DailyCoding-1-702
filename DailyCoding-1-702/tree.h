@@ -18,15 +18,14 @@ using namespace std;
 
 class Tree {
 public:
-
+    //TODO: destructor
     Tree() : count(0), root(nullptr) {}
-
-    friend ostream& operator << (ostream& ostr, const Tree& tree);  // calls print and 
-    // outputs count
+    
+    // calls print and outputs count
+    friend ostream& operator << (ostream& ostr, const Tree& tree);  
     bool insert(int newVal);//inserts a new value into the tree
 
 
-    //depricated
     bool insertRecursive(int newVal); //inserts a new value into the tree
     const int getCount();
 
