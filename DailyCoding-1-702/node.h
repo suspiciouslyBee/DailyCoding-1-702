@@ -26,29 +26,29 @@ public:
         hasRight(false), hasLeft(false) {}
 
     //Data
-    int data;
+    
     Node* left,
         * right;
-    //'Observed' Data
-    bool hasRight; //i should make these private with getters/setters. im lazy
-    bool hasLeft;
+  
+
 
     //manipulation functions
+    void setData(int in);
     int getNum() const; //return the data
     int getOccurance() const; //how many instances of this element?
     void print(ostream& ostr) const; //prints to an oustream
 
-
-    //depricated functions
     // recursively searches the proper place (smallest to greatest) to put new
     // int (left or right node? or children of node?), returns address of the
     // new node if sucessful, otherwise returns nullptr
-    // 
     // duplicate entries are not entirely discarded, it increments 'occurance'
     // and still returns nullptr.
     Node* insertWhere(int num);
-
     void renumerate(); //renumerate if node has left or right children nodes
 
+private:
+    int data;
     int occurance;
+    bool hasRight; 
+    bool hasLeft;
 };
