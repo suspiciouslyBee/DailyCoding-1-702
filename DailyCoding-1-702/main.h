@@ -1,7 +1,0 @@
-#pragma once
-////
-//	Author: suspiciouslyBee
-// 
-// 
-// 
-////
