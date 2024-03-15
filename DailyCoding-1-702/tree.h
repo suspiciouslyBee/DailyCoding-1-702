@@ -25,8 +25,6 @@ public:
     friend ostream& operator << (ostream& ostr, const Tree& tree);  
     bool insert(int newVal);//inserts a new value into the tree
 
-
-    bool insertRecursive(int newVal); //inserts a new value into the tree
     const int getCount();
 
 private:
